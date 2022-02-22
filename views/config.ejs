@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SAML Config</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>SAML Config</h1>
+    <p>Add SAML Metadata.</p>
+    <form action="/config" method="POST">
+      <div class="form-group">
+        <label for="tenant">Tenant</label>
+        <input
+          type="text"
+          name="tenant"
+          id="tenant"
+          class="form-control col-md-6"
+          required="required"
+        />
+      </div>
+      <div class="form-group">
+        <label for="product">Product</label>
+        <input
+          type="text"
+          name="product"
+          id="product"
+          class="form-control col-md-6"
+          required="required"
+        />
+      </div>
+      <div class="form-group">
+        <label for="rawMetadata">Metadata (Raw XML)</label>
+        <textarea
+          name="rawMetadata"
+          id="rawMetadata"
+          cols="30"
+          rows="10"
+          class="form-control col-md-6"
+          required="required"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+</html>
